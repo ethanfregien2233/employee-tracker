@@ -1,37 +1,38 @@
-DROP DATABASE IF EXISTS employee_tracker;
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Tony', 'Soprano', 1, null);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Jessica', 'Rabbit', 2, 1);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Hannibal', 'Lector', 2, 1);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Frank', 'Thetank', 4, 1);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Michael', 'Scott', 3, 1);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('John', 'Wick', 5, 2);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Saul', 'Goodman', 6, null);
 
-CREATE DATABASE employee_tracker;
+INSERT INTO department (department_name)
+VALUES ('Management');
+INSERT INTO department (department_name)
+VALUES ('Sales');
+INSERT INTO department (department_name)
+VALUES ('Accounting');
+INSERT INTO department (department_name)
+VALUES ('Reception');
+INSERT INTO department (department_name)
+VALUES ('Human Resources');
 
-USE employee_tracker;
-
-CREATE TABLE employee (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  first_name VARCHAR(30),
-  last_name DECIMAL(30),
-  manager_id INT
-  FOREIGN KEY (role_id) REFERENCES role(id)
-  FOREIGN KEY (employee_id) REFERENCES employee(id)
-
-);
-
-CREATE TABLE department (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30),
-
-);
-
-CREATE TABLE role (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(30),
-  salary DECIMAL,
-  FOREIGN KEY (department_id) REFERENCES department(id)
-);
-
-INSERT INTO products ()
-VALUES ();
-
-INSERT INTO products ()
-VALUES ();
-
-INSERT INTO products ()
-VALUES ();
+INSERT INTO role (title, salary, department_id)
+VALUES ('General Manager', 120000, 1);
+INSERT INTO role (title, salary, department_id)
+VALUES ('Salesman', 80000, 2);
+INSERT INTO role (title, salary, department_id)
+VALUES ('Accountant', 90000, 4);
+INSERT INTO role (title, salary, department_id)
+VALUES ('Receptionist', 40000, 3);
+INSERT INTO role (title, salary, department_id)
+VALUES ('Human Resource Officer', 75000, 5);
+INSERT INTO role (title, salary, department_id)
+VALUES ('CEO', 250000, null);
