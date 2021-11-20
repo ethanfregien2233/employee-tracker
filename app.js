@@ -101,7 +101,7 @@ const employeeView = async () => {
     };
 }
 
-// Selection to view all of the departments.
+
 const departmentView = async () => {
     console.log('Department View');
     try {
@@ -119,7 +119,7 @@ const departmentView = async () => {
     };
 }
 
-// Selection to view all of the roles.
+
 const roleView = async () => {
     console.log('Role View');
     try {
@@ -137,7 +137,7 @@ const roleView = async () => {
     };
 }
 
-// Selection to add a new employee.
+
 const employeeAdd = async () => {
     try {
         console.log('Employee Add');
