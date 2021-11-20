@@ -1,10 +1,10 @@
-// List the dependencies here.
+
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 const consoleTable = require('console.table');
 const util = require('util');
 
-// Create the connection to MySQL WorkBench
+
 let connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
@@ -15,18 +15,18 @@ let connection = mysql.createConnection({
 
 connection.query = util.promisify(connection.query);
 
-// Begin the application after establishing the connection.
+
 connection.connect(function (err) {
     if (err) throw err;
     initialAction();
 })
 
-// Give the user a pleasant welcome message.
+
 console.table(
     "\n------------ EMPLOYEE TRACKER ------------\n"
 )
 
-// Ask the user initial action question to figure out what they would like to do.
+
 const initialAction = async () => {
     try {
         let answer = await inquirer.prompt({
@@ -197,7 +197,7 @@ const employeeAdd = async () => {
     };
 }
 
-// Selection to add a new department.
+
 const departmentAdd = async () => {
     try {
         console.log('Department Add');
@@ -223,7 +223,7 @@ const departmentAdd = async () => {
     };
 }
 
-// Selection to add a new role.
+
 const roleAdd = async () => {
     try {
         console.log('Role Add');
@@ -275,7 +275,7 @@ const roleAdd = async () => {
     };
 }
 
-// Selection to update a roll for a specific employee.
+
 const employeeUpdate = async () => {
     try {
         console.log('Employee Update');
